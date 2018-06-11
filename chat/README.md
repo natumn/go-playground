@@ -1,0 +1,11 @@
+### TODO: Defined routing.
+	 - POST /login              user login.
+	 - POST /accounts           create account. 
+	 - GET /rooms	            get rooms list.
+	 - POST /rooms              create new room.
+	 - PUT /rooms/:id			room rename.
+     - DELETE /rooms:id         delete room.
+	 - POST /rooms/:roomid	    post message on room.
+	 - GET /rooms/:roomid	    get all room's message.
+	 - PATCH /rooms/:roomid	    edit message.
+	 - DELETE /rooms/:roomid    delete message.
