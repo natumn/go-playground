@@ -1,21 +1,32 @@
 package main
 
 import (
+	"errors"
 	"fmt"
-	"net/http"
+
+	"github.com/manifoldco/promptui"
 )
 
-type MyHandler struct{}
-
-func (h *MyHandler) serveHTTP(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello World!")
-}
-
 func main() {
-	handler := MyHandler{}
-	server := http.Server{
-		Addr:    "127.0.0.1:8080",
-		Handler: &handler,
+	validate := func(input string) error {
+		if len(input) < 6 {
+			return errors.New("Password must have more than 6 characters")
+		}
+		return nil
 	}
-	server.ListenAndServe()
+
+	prompt := promptui.Prompt{
+		Label:    "Password",
+		Validate: validate,
+		Mask:     '*',
+	}
+
+	result, err := prompt.Run()
+
+	if err != nil {
+		fmt.Printf("Prompt failed %v\n", err)
+		return
+	}
+
+	fmt.Printf("Your password is %q\n", result)
 }
