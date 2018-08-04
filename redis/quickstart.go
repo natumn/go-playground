@@ -10,11 +10,18 @@ import (
 type Option func(*redis.Options) error
 
 func main() {
-	client, err := NewClient(Addr("localhost:6379"), Password(""), DB(0))
+	client, err := NewClient(Addr("/tmp/redis.sock"), Password(""), DB(0), Network("unix"))
 	if err != nil {
 		log.Fatal(err)
 	}
 	ExampleClient(client)
+}
+
+func Network(nw string) Option {
+	return func(c *redis.Options) error {
+		c.Network = nw
+		return nil
+	}
 }
 
 func Addr(addr string) Option {
