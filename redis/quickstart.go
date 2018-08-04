@@ -9,9 +9,6 @@ import (
 
 type Option func(*redis.Options) error
 
-type Redis struct {
-}
-
 func main() {
 	client, err := NewClient(Addr("localhost:6379"), Password(""), DB(0))
 	if err != nil {
