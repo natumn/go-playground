@@ -1,4 +1,6 @@
 github.com/golang/protobuf v1.2.0 h1:P3YflyNX/ehuJFLhxviNdFxQPkGK5cDcApsge1SqnvM=
 github.com/golang/protobuf v1.2.0/go.mod h1:6lQm79b+lXiMfvg/cZm0SGofjICqVBUtrP5yJMmIC1U=
+github.com/nametake/protoc-gen-gohttp v0.0.0-20181121045253-2ebc4a7615c2 h1:ryqaE1TMbth3ZGQpASczv1uDiAhfb+KLBUwqEVmU0Jc=
+github.com/nametake/protoc-gen-gohttp v0.0.0-20181121045253-2ebc4a7615c2/go.mod h1:1GzvmTIe2ewltKkrFV5zUVzCo7PdAXJGu/J+suiz5Os=
 github.com/twitchtv/twirp v5.5.0+incompatible h1:fiY15GnLE0RM9xRkddwL2m6NjKmMyrr4hiHzHxtpmj8=
 github.com/twitchtv/twirp v5.5.0+incompatible/go.mod h1:RRJoFSAmTEh2weEqWtpPE3vFK5YBhA6bqp2l1kfCC5A=
